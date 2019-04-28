@@ -67,10 +67,11 @@ This file contains the trained weights of the most recently trained agent. You c
 ## Agent design and implementation
 
 
-**Details of the agent design can also be found in the report.pdf, but a summary with references is provided here:**
+**Details of the agent design can also be found in the Report.md, but a summary is provided here:**
 
 The algorithm used is based on the Deep Reinforcement Learning DDPG algorithm described in this paper: https://arxiv.org/pdf/1509.02971.pdf
 
+\
 Deep Reinforcement Learning is an innovative approach that effectively combines two seperate fields:
 
 ### Reinforcement Learning
@@ -78,6 +79,9 @@ In Reinforcement learning, the goal is to have an agent learn how to navigate a 
 
 ### Deep Learning
 Famous in computer vision and natural language processing, deep learning uses machine learning to make predictions by leveraging vast amounts of training data and a flexible architecture that is able to generalise to previously unseen examples. In Deep Reinforcement Learning we leverage this power to learn which actions to take, and use the agents experiences within the enviroment as a reusable form of training data. This proves to be a powerful combination thanks to Deep learning's ability to generalise given sufficent data and flexibility.
+
+\
+**Combined these two fields lead to:**
 
 ### Deep Q Learning
 The Q network is designed to map state-action combinations to values. Thus we can feed it our current state and then determine the best action as the one that has the largest estimated state-action value. In practice we typically adopt a somewhat random action early on to encourage initial exporation. After we've collected enough state-action-reward-state experiences we start updating the model. This is acheived by sampling some of our experiences and then computing the empirically observed estimates of the state-action values compared to those estimated from the model. The difference between these two is coined the TD-error and we then make a small modification to the model weights to reduce this error, via neural network backpropagation of the TD-error. We simply iterate this process over many timesteps per episode, and many episodes, until convergence of the model weights is acheived.
