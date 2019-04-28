@@ -52,7 +52,7 @@ To test a pre-trained agent (I've included my trained one in this repository) si
 As stated above train_agent.ipynb and test_agent.ipynb are intuitive files that are all that's required to walk you through training or testing this agent. If however you would like to change the code (such as to specify a different model architecture, or hyperparameter selection) then you may find the following descriptions useful:
 
 ### report.md
-This describes the implementation in detail beyond the scope of this readme. Read this file if you'd like to know more about: the model architecture, the DQN algorithm itself and the hyperparameters used, the modifications made such as Dual DQN and prioritised replay, or the suggestions for further work.
+This describes additional details of the implementation such as hyperparameters and specifics of the DDPG algorithm.
 
 ### model.py
 This is a simple python script that specifies the pytorch model architectures used for the Actor Network and Critic Network. For this project the architecture is quite straightforward, simple feed-forward neural networks with linear layers. 
